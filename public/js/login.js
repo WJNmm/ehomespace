@@ -13,6 +13,8 @@ define(['jquery'], function ($) {
                 if (data.code == 200) {
                     //登陆成功，跳转到主页面
                     if (data.code == 200) {
+                        // 先保存cookie
+                        $.cookie('loginInfo',JSON.stringify(data.result),{path : '/'});
                         //登录成功，跳转到主页面
                         location.href = '/main/index'
                     } else {
