@@ -1,4 +1,6 @@
 define(['jquery', 'template','util', 'bootstrap'], function ($, template,util) {
+    var ret = util.qs('flag');
+    console.log(ret);
     //设置导航菜单选中
     util.setMenu(location.pathname);
     // 调用后台接口获取列表数据
@@ -7,7 +9,6 @@ define(['jquery', 'template','util', 'bootstrap'], function ($, template,util) {
         url: '/api/teacher',
         dataType: 'json',
         success: function (data) {
-            console.log(data);
             // 解析数据渲染页面
             var html = template('teacherTpl', {list: data.result});
             $('#teacherInfo').html(html);

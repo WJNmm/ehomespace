@@ -28,7 +28,6 @@ define(['jquery', 'template', 'cookie'], function ($, template) {
     // 获取登录信息
     var loginInfo = $.cookie('loginInfo');
     var info = loginInfo ? JSON.parse(loginInfo) : {};
-    console.log(info);
 
     var tplstr = '<div class="avatar img-circle"><img src="{{tc_avatar}}"></div><h4>{{tc_name}}</h4>';
     var html = template.render(tplstr, info);
