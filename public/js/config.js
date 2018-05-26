@@ -3,34 +3,37 @@ require.config({
     paths: {
         jquery: 'jquery/jquery',
         cookie: 'jquery-cookie/jquery.cookie',
-        template:'artTemplate/template-web',
-        bootstrap:'bootstrap/js/bootstrap.min',
-        datepicker:'bootstrap-datepicker/js/bootstrap-datepicker',
-        language:'bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min',
-        form:'jquery-form/jquery.form',
-        validate:'validate/jquery-validate.min',
-        uploadify:'../assets/uploadify/jquery.uploadify.min',
-        region:'jquery-region/jquery.region',
+        template: 'artTemplate/template-web',
+        bootstrap: 'bootstrap/js/bootstrap.min',
+        datepicker: 'bootstrap-datepicker/js/bootstrap-datepicker',
+        language: 'bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min',
+        form: 'jquery-form/jquery.form',
+        validate: 'validate/jquery-validate.min',
+        uploadify: '../assets/uploadify/jquery.uploadify.min',
+        region: 'jquery-region/jquery.region',
+        ckeditor:'ckeditor/ckeditor',
         common: '../js/common',
         login: '../js/login',
-        index:'../js/index',
+        index: '../js/index',
         teacherlist: '../js/teacher-list',
         teacheradd: '../js/teacher-add',
-        util:'../js/util',
-        settings:'../js/settings'
-    },shim:{
-        bootstrap:{
-            deps:['jquery']
+        util: '../js/util',
+        settings: '../js/settings'
+    }, shim: {
+        bootstrap: {
+            deps: ['jquery']
         },
-        language:{
-            deps:['jquery','datepicker']
+        language: {
+            deps: ['jquery', 'datepicker']
         },
-        validate:{
-            deps:['jquery']
+        validate: {
+            deps: ['jquery']
         },
-        uploadify :{
-            deps:['jquery']
-
+        uploadify: {
+            deps: ['jquery']
+        },
+        ckeditor: {
+            exports: 'CKEDITOR'
         }
     }
 });
