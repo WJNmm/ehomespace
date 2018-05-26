@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="/public/assets/jcrop/css/Jcrop.min.css">
 </head>
 <body>
-    
+
     <!-- 侧边栏 -->
     <div class="aside">
         <?php include('./views/common/aside.html'); ?>
@@ -29,13 +29,11 @@
         <input type="text" name="h">
     </form>
     <script type="text/tempalate" id="pictureTpl">
-        <!-- 面包屑 -->
         <ol class="breadcrumb">
             <li><a href="javascript:;">课程管理</a></li>
             <li class="active">课程添加</li>
         </ol>
         <div class="steps">
-            <!-- 摘要 -->
             <div class="brief">
                 <div class="thumb">
                     {{if cs_cover}}
@@ -47,7 +45,6 @@
                     <dd>讲师：{{tc_name}}</dd>
                 </dl>
             </div>
-            <!-- 步聚 -->
             <ul class="forwards list-unstyled">
                 <li>
                     <a href="/course/basic?cs_id={{cs_id}}" class="done">
@@ -100,6 +97,6 @@
     <script type="text/javascript">
         require(['coursepicture']);
     </script>
-    
+
 </body>
 </html>
