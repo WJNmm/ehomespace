@@ -41,6 +41,9 @@ require.config({
         },
         ckeditor: {
             exports: 'CKEDITOR'
+        },
+        jcrop : {
+            deps : ['jquery']
         }
     }
 });
