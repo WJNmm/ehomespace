@@ -14,9 +14,10 @@ require.config({
         index:'../js/index',
         teacherlist: '../js/teacher-list',
         teacheradd: '../js/teacher-add',
-        util:'../js/util'
+        util:'../js/util',
+        settings:'../js/settings'
     },shim:{
-        bootstrap:{
+        bootscript:{
             deps:['jquery']
         },
         language:{
