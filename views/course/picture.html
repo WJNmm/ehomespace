@@ -8,32 +8,34 @@
 </head>
 <body>
 
-    <!-- 侧边栏 -->
-    <div class="aside">
-        <?php include('./views/common/aside.html'); ?>
-    </div>
-    <!-- 主体 -->
-    <div class="main">
-        <div class="container-fluid">
-            <!-- 头部 -->
-            <?php include('./views/common/header.html'); ?>
-            <div class="body course-add" id="pictureInfo">
-                <!-- 挖个坑 -->
-            </div>
+<!-- 侧边栏 -->
+<div class="aside">
+    <?php include('./views/common/aside.html'); ?>
+</div>
+<!-- 主体 -->
+<div class="main">
+    <div class="container-fluid">
+        <!-- 头部 -->
+        <?php include('./views/common/header.html'); ?>
+        <div class="body course-add" id="pictureInfo">
+            <!-- 挖个坑 -->
         </div>
     </div>
-    <form id="cropForm" style="display: none;">
-        <input type="text" name="x">
-        <input type="text" name="y">
-        <input type="text" name="w">
-        <input type="text" name="h">
-    </form>
-    <script type="text/tempalate" id="pictureTpl">
+</div>
+<form id="cropForm" style="display: none;">
+    <input type="text" name="x">
+    <input type="text" name="y">
+    <input type="text" name="w">
+    <input type="text" name="h">
+</form>
+<script type="text/tempalate" id="pictureTpl">
+
         <ol class="breadcrumb">
             <li><a href="javascript:;">课程管理</a></li>
             <li class="active">课程添加</li>
         </ol>
         <div class="steps">
+
             <div class="brief">
                 <div class="thumb">
                     {{if cs_cover}}
@@ -45,6 +47,7 @@
                     <dd>讲师：{{tc_name}}</dd>
                 </dl>
             </div>
+
             <ul class="forwards list-unstyled">
                 <li>
                     <a href="/course/basic?cs_id={{cs_id}}" class="done">
@@ -65,7 +68,7 @@
                     </a>
                 </li>
             </ul>
-            <!-- 课程图片 -->
+
             <div class="content">
                 <!-- 标题 -->
                 <div class="title">
@@ -93,10 +96,10 @@
             </div>
         </div>
     </script>
-    <?php include('./views/common/script.html'); ?>
-    <script type="text/javascript">
-        require(['coursepicture']);
-    </script>
+<?php include('./views/common/script.html'); ?>
+<script type="text/javascript">
+    require(['coursepicture']);
+</script>
 
 </body>
 </html>
